@@ -1,35 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Project tracking intro component</title>
 
   <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
+
 <body>
-  Product
-  Features
-  Pricing
-  Login
+  <nav>
+    <figure>
+      <img src="images/logo.svg" alt="Brand Logo">
+    </figure>
 
-  New
-  Monograph Dashboard
+    <div class="menu">
+      <label for="menuToggle">
+        <figure>
+          <img src="images/icon-close.svg" alt="Close">
+        </figure>
+        <figure>
+          <img src="images/icon-hamburger.svg" alt="Open">
+        </figure>
+      </label>
+      <input type="checkbox" id="menuToggle">
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+      <ul>
+        <li>Product</li>
+        <li>Features</li>
+        <li>Pricing</li>
+        <li>Login</li>
+      </ul>
+    </div>
+  </nav>
 
-  Schedule a demo
-  to see a live preview
-  
+  <main>
+    <figure>
+      <img src="images/illustration-devices.svg" alt="Devices">
+    </figure>
+
+    <p class="lead">
+      <span class="pill">New</span>
+      <span class="product">Monograph Dashboard
+    </p>
+
+    <h1 class="heading">Powerful insights into your team</h1>
+
+    <section class="brief">
+      Project planning and time tracking for agile teams
+    </section>
+
+    <p class="cta">
+      <span class="button">Schedule a demo</span>
+      <span>to see a live preview</span>
+    </p>
+  </main>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
 </body>
+
 </html>
