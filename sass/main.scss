@@ -38,6 +38,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -74,7 +79,7 @@ ul {
 nav {
   display: flex;
   margin-top: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -91,6 +96,11 @@ img {
 
   &.close {
     display: none;
+  }
+
+  &.illustration {
+    transform: translateX(-4.5%);
+    width: 163%;
   }
 }
 
@@ -109,6 +119,7 @@ img {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size);
   text-transform: uppercase;
+  z-index: 10;
 
   li {
     letter-spacing: 1px;

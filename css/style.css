@@ -34,6 +34,11 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+}
+
 ul {
   list-style: none;
 }
@@ -75,7 +80,7 @@ ul {
 nav {
   display: flex;
   margin-top: 2.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -89,6 +94,10 @@ img.open {
 }
 img.close {
   display: none;
+}
+img.illustration {
+  transform: translateX(-4.5%);
+  width: 163%;
 }
 
 .nav__list {
@@ -106,6 +115,7 @@ img.close {
   font-weight: var(--font-weight-bold);
   font-size: var(--font-size);
   text-transform: uppercase;
+  z-index: 10;
 }
 .nav__list li {
   letter-spacing: 1px;
