@@ -1,3 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&display=swap");
+:root {
+  --color-primary-red: hsl(0, 100%, 68%);
+  --color-neutral-dark-blue: hsl(230, 29%, 20%);
+  --color-neutral-light-grayish-blue: hsl(207, 33%, 95%);
+  --color-neutral-grayish-blue: hsl(231, 7%, 65%);
+  --color-neutral-dark-grayish-blue: hsl(230, 11%, 40%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-family-body: "Barlow", sans-serif;
+  --font-family-other: "Barlow Condensed", sans-serif;
+  --font-weight-bold: 700;
+  --font-weight-regular: 400;
+  --font-size: 1.125rem;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+span {
+  display: block;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  width: 82.5%;
+  margin: 0 auto;
+}
+@media (min-width: 40rem) {
+  .container {
+    max-width: 640px;
+  }
+}
+@media (min-width: 48rem) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media (min-width: 64rem) {
+  .container {
+    max-width: 1024px;
+  }
+}
+@media (min-width: 80rem) {
+  .container {
+    max-width: 1280px;
+  }
+}
+@media (min-width: 96rem) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+nav {
+  display: flex;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+img.brand {
+  width: 75%;
+}
+img.open {
+  display: block;
+}
+img.close {
+  display: none;
+}
+
+.nav__list {
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 4rem;
+  left: 0;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  box-shadow: 0px 1px 22px 0px var(--color-neutral-grayish-blue);
+  border-radius: 3px;
+  font-family: var(--font-family-other);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size);
+  text-transform: uppercase;
+}
+.nav__list li {
+  letter-spacing: 1px;
+}
+.nav__list li:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+.nav__list li:last-child {
+  padding-top: 1.5rem;
+  color: var(--color-neutral-grayish-blue);
+  border-top: 1px solid var(--color-neutral-light-grayish-blue);
+}
+
+input {
+  display: none;
+}
+input:checked + label img.open {
+  display: none;
+}
+input:checked + label img.close {
+  display: block;
+}
+input:checked ~ .nav__list {
+  display: block;
+}
+
 .attribution {
   display: none;
 }
