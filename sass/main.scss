@@ -74,22 +74,27 @@ ul {
   margin: 0 auto;
 
   @media (min-width: 40rem) {
+    width: 81.1%;
     max-width: 640px;
   }
 
   @media (min-width: 48rem) {
+    width: 79.7%;
     max-width: 768px;
   }
 
   @media (min-width: 64rem) {
+    width: 78.3%;
     max-width: 1024px;
   }
 
   @media (min-width: 80rem) {
+    width: 77%;
     max-width: 1280px;
   }
 
   @media (min-width: 96rem) {
+    width: 75.6%;
     max-width: 1536px;
   }
 }
@@ -105,15 +110,27 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: relative;
+
+  @media (min-width: 48rem) {
+    margin-top: 3rem;
+  }
 }
 
 img {
   &.brand {
     width: 75%;
+
+    @media (min-width: 48rem) {
+      width: 85%;
+    }
   }
 
   &.open {
     display: block;
+
+    @media (min-width: 48rem) {
+      display: none;
+    }
   }
 
   &.close {
@@ -123,6 +140,11 @@ img {
   &.illustration {
     transform: translateX(-4.5%);
     width: 163%;
+
+    @media (min-width: 64rem) {
+      width: 215%;
+      transform: translateX(-2.5%);
+    }
   }
 }
 
@@ -142,17 +164,37 @@ img {
   text-transform: uppercase;
   z-index: 10;
 
+  @media (min-width: 48rem) {
+    display: flex;
+    position: relative;
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    z-index: 0;
+  }
+
   li {
     letter-spacing: 1px;
 
     &:not(:last-child) {
       margin-bottom: 1.5rem;
+
+      @media (min-width: 48rem) {
+        margin-bottom: 0;
+        margin-right: 2.5rem;
+      }
     }
 
     &:last-child {
       position: relative;
       padding-top: 1.5rem;
       color: var(--color-neutral-grayish-blue);
+
+      @media (min-width: 48rem) {
+        padding-top: 0;
+        padding-left: 2.5rem;
+      }
 
       &::before {
         position: absolute;
@@ -163,6 +205,15 @@ img {
         height: 1.5px;
         background-color: var(--color-neutral-light-grayish-blue);
         z-index: 20;
+
+        @media (min-width: 48rem) {
+          content: "";
+          top: 50%;
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: var(--color-neutral-grayish-blue);
+        }
       }
     }
   }
@@ -194,6 +245,10 @@ input {
   column-gap: 1rem;
   margin-top: 5rem;
   margin-bottom: 1rem;
+
+  @media (min-width: 64rem) {
+    margin-top: 3rem;
+  }
 }
 
 .pill {
@@ -223,6 +278,11 @@ input {
   font-size: 2.4rem;
   line-height: 1;
   letter-spacing: 0.5px;
+
+  @media (min-width: 64rem) {
+    margin-bottom: 2.5rem;
+    font-size: 4rem;
+  }
 }
 
 .brief {
@@ -230,6 +290,11 @@ input {
   color: var(--color-neutral-dark-grayish-blue);
   line-height: 1.5;
   letter-spacing: 0.5px;
+
+  @media (min-width: 64rem) {
+    width: 60%;
+    margin-bottom: 4rem;
+  }
 }
 
 .cta {
@@ -240,11 +305,42 @@ input {
   font-size: 0.875rem;
   color: var(--color-neutral-grayish-blue);
 
+  @media (min-width: 64rem) {
+    justify-content: flex-start;
+  }
+
   a {
     padding: 0.75rem 1rem;
     color: var(--color-white);
     background-color: var(--color-primary-red);
     border-radius: 4px;
+
+    @media (min-width: 64rem) {
+      margin-right: 1.5rem;
+    }
+  }
+}
+
+@media (min-width: 48rem) {
+  label {
+    display: none;
+  }
+}
+
+@media (min-width: 64rem) {
+  main > div.container {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    column-gap: 6rem;
+
+    figure {
+      flex: 1;
+    }
+
+    .copy {
+      flex: 1;
+    }
   }
 }
 
